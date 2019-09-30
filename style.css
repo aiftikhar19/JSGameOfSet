@@ -1,0 +1,166 @@
+html{
+  background-color: #1c1c1c;
+  font-family: 'Baloo Chettan', sans-serif;
+}
+.correct{
+  background-color: #1c1c1c;
+  animation: greenbg 2s;
+}
+.incorrect{
+  background-color: #1c1c1c;
+  animation: redbg 2s;
+}
+@keyframes redbg {
+  from  {background-color: red}
+  to    {background-color: #1c1c1c;}
+}
+@keyframes greenbg {
+  from  {background-color: green}
+  to    {background-color: #1c1c1c;}
+}
+body{
+  width: 70%;
+  margin: 0 auto;
+  min-width: 500pt;
+  max-width: 1000pt;
+}
+.buttons{
+  float: left;
+  width:30%;
+  text-align: center;
+  max-width: 250pt;
+}
+#hintButton{
+  cursor: pointer;
+}
+#hintButton:hover{
+  background-color: #999999;
+  animation: wiggle .5s;
+}
+h2{
+  text-transform: lowercase;
+  margin: 5px;
+  font-size: 25pt;
+  font-weight: 300;
+  display: inline-block;
+  background-color: white;
+  padding: 8pt 16pt;
+  border-radius: 10px;
+}
+#cards{
+  float:right;
+  width: 70%;
+  max-width: 500pt;
+}
+form{
+  width:50%;
+  min-width: 300pt;
+  padding:30pt;
+  background-color: white;
+  border-radius: 10pt;
+  display: block;
+  margin: 10% auto;
+  border: 3pt solid #FF3333;
+  box-shadow: 5px 5px 0px 0px #FFD000;
+}
+label,input,button{
+  display: block;
+  margin: 10pt;
+  font-size: 20pt;
+  font-family: 'Baloo Chettan', sans-serif;
+}
+input:focus, button:focus{
+  outline: 0;
+}
+input,button{
+  padding:7pt;
+  border-radius: 10pt;
+  border: 3pt solid #FF3333;
+  box-shadow: 5px 5px 0px 0px #FFD000;
+}
+button{
+  background-color: #e3eaed;
+}
+
+button:hover{
+  background-color: #999999;
+  border: 3pt solid #FFD000;
+  box-shadow: 5px 5px 0px 0px #FF3333;
+}
+button:focus{
+  box-shadow: 0;
+}
+h2:nth-child(3n+2){border: 3pt solid #FFD000}
+h2:nth-child(3n+3){border: 3pt solid #FF3333}
+h2:nth-child(3n+4){border: 3pt solid #334B99}
+
+.playerButton.currentPlayer:nth-child(3n+2){background-color: #FFD000}
+.playerButton.currentPlayer:nth-child(3n+3){background-color: #FF3333}
+.playerButton.currentPlayer:nth-child(3n+4){background-color: #334B99}
+
+#help, #help a{
+  cursor: help;
+}
+#help:hover{
+  background-color: #999999;
+}
+.buttons a{
+  text-decoration: none;
+  color: black;
+}
+
+.buttons h2{
+  cursor: default;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.playerButton:hover, #quit:hover{
+  background-color: #999999;
+}
+
+.st0{fill:#FFFFFF;stroke:#999999;stroke-width:10;stroke-miterlimit:10;}
+.st1{stroke-width:12;stroke-miterlimit:10;}
+.yellow .st1{stroke:#FFD000;}
+.purple .st1{stroke:#FF3333;}
+.blue .st1{stroke:#334B99;}
+.selected .st0{fill:#999999}
+.hint {animation: wiggle .5s}
+.yellow.solid .st1{fill:#FFD000;}
+.purple.solid .st1{fill:#FF3333;}
+.blue.solid .st1{fill:#334B99;}
+.empty .st1{fill:#ffffff00;}
+
+.yellow.dotted .st1{fill:url(#circles-yellow)}
+.blue.dotted .st1{fill:url(#circles-blue)}
+.purple.dotted .st1{fill:url(#circles-red)}
+
+svg{
+  width: 22%;
+  padding: 1%;
+  margin: 0;
+  cursor: crosshair;
+}
+svg:hover{
+  transform: scale(0.9);
+  animation: a .1s;
+}
+@keyframes wiggle {
+  0%{transform: rotate(0deg)}
+  25%{transform: rotate(10deg)}
+  75%{transform: rotate(-10deg)}
+  100%{transform: rotate(0deg)}
+}
+@keyframes shadow {
+  0%{box-shadow: 0px 0px 0px -200px rgba(0,0,0,0.75);}
+  50%{box-shadow: 0px 0px 53px 1px rgba(0,0,0,0.75);}
+  100%{box-shadow: 0px 0px 0px -200px rgba(0,0,0,0.75);}
+}
+@keyframes a {
+  from {transform: scale(1)}
+    to {transform: scale(0.9)}
+}
